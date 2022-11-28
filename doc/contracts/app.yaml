@@ -1,0 +1,53 @@
+openapi: 3.0.3
+info:
+  title: Game API
+  version: 1.0.0
+paths:
+  /choices:
+    get:
+      operationId: Game_GetChoices
+      summary: ''
+      description: Returns ...
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: app.DataModels.yaml#/components/schemas/ChoiceDto
+  /choice:
+    get:
+      operationId: Game_GetRandomChoice
+      summary: ''
+      description: Returns ...
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: ./app.DataModels.yaml#/components/schemas/ChoiceDto
+  /play:
+    post:
+      operationId: Game_GetRandomChoice
+      summary: ''
+      description: Returns ...
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: ./app.DataModels.yaml#/components/schemas/PlayRequestDto
+          application/xml:
+            schema:
+              type: object
+              properties: {}
+        description: ''
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: ./app.DataModels.yaml#/components/schemas/PlayResponseDto

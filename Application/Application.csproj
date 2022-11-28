@@ -9,7 +9,30 @@
 
     <ItemGroup>
         <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="7.0.0" />
+        <PackageReference Include="NSwag.MSBuild" Version="13.18.0">
+          <PrivateAssets>all</PrivateAssets>
+          <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+        </PackageReference>
         <PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0" />
     </ItemGroup>
 
+    <ItemGroup>
+        <Folder Include="Contracts" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="../doc/contracts/app.DataModels.yaml">
+            <Link>Contracts/app.DataModels.yaml</Link>
+            <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+        </Content>
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="../doc/contracts/app.yaml">
+            <Link>Contracts/app.yaml</Link>
+            <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+        </Content>
+    </ItemGroup>
+
+    <Target Name="NSwag" AfterTargets="BeforeCompile">
+        <Exec Command="$(NSwagExe_Net60) run ModelsGenerationConfig.nswag" />
+    </Target>
 </Project>

@@ -1,0 +1,21 @@
+﻿{
+  "runtime": "Net60",
+  "documentGenerator": {
+    "fromDocument": {
+      "url": "../doc/contracts/app.DataModels.yaml"
+    }
+  },
+  "codeGenerators": {
+    "openApiToCSharpController": {
+      "jsonLibrary": "SystemTextJson",
+      "namespace": "Application.Models",
+      "output": "Models/Models.Generated.cs",
+      "arrayType": "System.Collections.Generic.List",
+      "classStyle": "Poco",
+      "excludedTypeNames": [
+        "OdataErrorResponse",
+        "OrderExportResponse"
+      ]
+    }
+  }
+}

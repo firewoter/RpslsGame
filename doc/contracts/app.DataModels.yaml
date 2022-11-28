@@ -1,0 +1,44 @@
+﻿openapi: 3.0.3
+
+info:
+  title: Game API Models
+  version: 1.0.0
+
+components:
+  schemas:
+    ChoiceDto:
+      type: object
+      additionalProperties: false
+      required:
+        - id
+        - name
+      properties:
+        id:
+          type: integer
+        name:
+          type: string
+          
+    PlayRequestDto:
+      type: object
+      additionalProperties: false
+      required:
+        - player
+      properties: 
+        player:
+          type: integer
+          
+    PlayResponseDto:
+      type: object
+      additionalProperties: false
+      properties: 
+        results:
+          type: string
+          enum: [
+            win,
+            lose,
+            tie
+          ]
+        player:
+          type: integer
+        computer:
+          type: integer
