@@ -8,16 +8,21 @@
     </PropertyGroup>
 
     <ItemGroup>
+        <PackageReference Include="AutoMapper" Version="12.0.0" />
+        <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="12.0.0" />
         <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="7.0.0" />
         <PackageReference Include="NSwag.MSBuild" Version="13.18.0">
           <PrivateAssets>all</PrivateAssets>
           <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
         </PackageReference>
+        <PackageReference Include="Serilog" Version="2.12.0" />
+        <PackageReference Include="Serilog.AspNetCore" Version="6.0.1" />
         <PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0" />
     </ItemGroup>
 
     <ItemGroup>
         <Folder Include="Contracts" />
+        <Folder Include="Examples" />
     </ItemGroup>
     <ItemGroup>
         <Content Include="../doc/contracts/app.DataModels.yaml">
@@ -30,6 +35,10 @@
             <Link>Contracts/app.yaml</Link>
             <CopyToOutputDirectory>Always</CopyToOutputDirectory>
         </Content>
+    </ItemGroup>
+    <ItemGroup>
+      <ProjectReference Include="..\Game.Domain\Game.Domain.csproj" />
+      <ProjectReference Include="..\Game.Infrastructure\Game.Infrastructure.csproj" />
     </ItemGroup>
 
     <Target Name="NSwag" AfterTargets="BeforeCompile">

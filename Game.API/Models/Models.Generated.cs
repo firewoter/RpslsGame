@@ -13,7 +13,7 @@
 #pragma warning disable 3016 // Disable "CS3016 Arrays as attribute arguments is not CLS-compliant"
 #pragma warning disable 8603 // Disable "CS8603 Possible null reference return"
 
-namespace Application.Models
+namespace Game.API.Models
 {
     using System = global::System;
 
@@ -54,8 +54,7 @@ namespace Application.Models
         [System.Text.Json.Serialization.JsonPropertyName("results")]
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.WhenWritingDefault)]   
-        [System.Text.Json.Serialization.JsonConverter(typeof(System.Text.Json.Serialization.JsonStringEnumConverter))]
-        public PlayResponseDtoResults Results { get; set; }
+        public string Results { get; set; }
 
         [System.Text.Json.Serialization.JsonPropertyName("player")]
 
@@ -66,21 +65,6 @@ namespace Application.Models
 
         [System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.WhenWritingDefault)]   
         public int Computer { get; set; }
-
-    }
-
-    [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "13.18.0.0 (NJsonSchema v10.8.0.0 (Newtonsoft.Json v13.0.0.0))")]
-    public enum PlayResponseDtoResults
-    {
-
-        [System.Runtime.Serialization.EnumMember(Value = @"win")]
-        Win = 0,
-
-        [System.Runtime.Serialization.EnumMember(Value = @"lose")]
-        Lose = 1,
-
-        [System.Runtime.Serialization.EnumMember(Value = @"tie")]
-        Tie = 2,
 
     }
 

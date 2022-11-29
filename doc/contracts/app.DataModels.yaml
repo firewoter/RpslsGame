@@ -33,11 +33,6 @@ components:
       properties: 
         results:
           type: string
-          enum: [
-            win,
-            lose,
-            tie
-          ]
         player:
           type: integer
         computer:

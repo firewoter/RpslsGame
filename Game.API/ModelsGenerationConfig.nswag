@@ -8,7 +8,7 @@
   "codeGenerators": {
     "openApiToCSharpController": {
       "jsonLibrary": "SystemTextJson",
-      "namespace": "Application.Models",
+      "namespace": "Game.API.Models",
       "output": "Models/Models.Generated.cs",
       "arrayType": "System.Collections.Generic.List",
       "classStyle": "Poco",
