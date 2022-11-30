@@ -26,6 +26,9 @@ public class Gameplay : IGame
 
         var state = _gameRules.CalculateGameState(playerMove.Id, computerMove.Id);
 
+        if (state == GameState.Undefined)
+            throw new InvalidOperationException();
+
         return new GameResult(state, playerMoveId, computerMove.Id);
     }
 }
