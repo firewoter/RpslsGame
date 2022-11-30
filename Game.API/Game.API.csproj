@@ -41,7 +41,7 @@
       <ProjectReference Include="..\Game.Infrastructure\Game.Infrastructure.csproj" />
     </ItemGroup>
 
-    <Target Name="NSwag" AfterTargets="BeforeCompile">
-        <Exec Command="$(NSwagExe_Net60) run ModelsGenerationConfig.nswag" />
-    </Target>
+<!--    <Target Name="NSwag" AfterTargets="BeforeCompile">-->
+<!--        <Exec Command="$(NSwagExe_Net60) run ModelsGenerationConfig.nswag" />-->
+<!--    </Target>-->
 </Project>
