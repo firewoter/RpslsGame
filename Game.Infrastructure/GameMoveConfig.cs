@@ -1,4 +1,4 @@
-﻿namespace Game.Domain.GameAggregate;
+﻿namespace Game.Infrastructure;
 
 public class GameMoveConfig
 {

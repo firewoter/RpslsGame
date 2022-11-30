@@ -8,12 +8,18 @@ namespace Game.API.Controllers;
 [ApiController]
 public class GameController : ControllerBase
 {
+    private readonly IGameMovesRepository _gameMovesRepository;
     private readonly IGame _game;
     private readonly IMapper _mapper;
     private readonly ILogger<GameController> _logger;
 
-    public GameController(IGame game, IMapper mapper, ILogger<GameController> logger)
+    public GameController(
+        IGameMovesRepository gameMovesRepository,
+        IGame game, 
+        IMapper mapper, 
+        ILogger<GameController> logger)
     {
+        _gameMovesRepository = gameMovesRepository;
         _game = game;
         _mapper = mapper;
         _logger = logger;
@@ -24,7 +30,7 @@ public class GameController : ControllerBase
     [Produces("application/json")]
     public List<ChoiceDto> GetChoices()
     {
-        var moves = _game.GetMoves();
+        var moves = _gameMovesRepository.GetMoves();
         return _mapper.Map<List<ChoiceDto>>(moves);
     }
 
@@ -33,7 +39,7 @@ public class GameController : ControllerBase
     [Produces("application/json")]
     public async Task<ChoiceDto> GetRandomChoice()
     {
-        var move = await _game.GetRandomMoveAsync();
+        var move = await _gameMovesRepository.GetRandomMoveAsync();
         return _mapper.Map<ChoiceDto>(move);
     }
 

@@ -10,6 +10,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{35B1F1FD
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test.Game.API", "Tests\Test.Game.API\Test.Game.API.csproj", "{2026E0A0-5CC9-47B7-B4C0-627A0B6FC57E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test.Game.Domain", "Tests\Test.Game.Domain\Test.Game.Domain.csproj", "{EFF7A7CC-F24F-4E5D-AD85-7F0DAEC2D89E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -32,8 +34,13 @@ Global
 		{2026E0A0-5CC9-47B7-B4C0-627A0B6FC57E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2026E0A0-5CC9-47B7-B4C0-627A0B6FC57E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2026E0A0-5CC9-47B7-B4C0-627A0B6FC57E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EFF7A7CC-F24F-4E5D-AD85-7F0DAEC2D89E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EFF7A7CC-F24F-4E5D-AD85-7F0DAEC2D89E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EFF7A7CC-F24F-4E5D-AD85-7F0DAEC2D89E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EFF7A7CC-F24F-4E5D-AD85-7F0DAEC2D89E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{2026E0A0-5CC9-47B7-B4C0-627A0B6FC57E} = {35B1F1FD-960E-44A8-9476-CF00BC2CB6CA}
+		{EFF7A7CC-F24F-4E5D-AD85-7F0DAEC2D89E} = {35B1F1FD-960E-44A8-9476-CF00BC2CB6CA}
 	EndGlobalSection
 EndGlobal
