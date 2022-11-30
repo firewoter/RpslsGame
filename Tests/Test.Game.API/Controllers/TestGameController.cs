@@ -1,5 +1,4 @@
-﻿using System.Collections;
-using System.Net;
+﻿using System.Net;
 using System.Text;
 using System.Text.Json;
 using FluentAssertions;
@@ -131,7 +130,7 @@ public class TestGameController : IClassFixture<WebAppFactory>
     {
         const string url = "play";
         
-        var body = new PlayRequestDto() { Player = playerChoice };
+        var body = new PlayRequestDto { Player = playerChoice };
         var bodyJson = JsonSerializer.Serialize(body);
         var stringContent = new StringContent(bodyJson, Encoding.UTF8, "application/json");
         

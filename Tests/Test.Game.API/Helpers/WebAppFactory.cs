@@ -1,5 +1,6 @@
 ﻿using Game.API;
 using Game.Domain.GameAggregate;
+using Game.Infrastructure;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc.Testing;
 using Microsoft.AspNetCore.TestHost;
