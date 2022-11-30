@@ -21,7 +21,7 @@ public class Startup
 
         services.Configure<GameConfig>(_configuration.GetSection(nameof(GameConfig)));
         
-        services.AddScoped<IGame, Domain.GameAggregate.Game>();
+        services.AddScoped<IGame, Gameplay>();
         services.AddScoped<IGameRules, GameRules>();
         services.AddScoped<IGameMovesRepository, GameMovesAndRulesRepository>();
         services.AddScoped<IGameRulesRepository, GameMovesAndRulesRepository>();

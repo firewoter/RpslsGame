@@ -2,12 +2,12 @@
 
 namespace Game.Domain.GameAggregate;
 
-public class Game : IGame
+public class Gameplay : IGame
 {
     private readonly IGameRules _gameRules;
     private readonly IGameMovesRepository _movesRepository;
     
-    public Game(IGameRules gameRules, IGameMovesRepository movesRepository)
+    public Gameplay(IGameRules gameRules, IGameMovesRepository movesRepository)
     {
         _gameRules = gameRules
                      ?? throw new ArgumentNullException(nameof(gameRules));
