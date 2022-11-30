@@ -28,6 +28,8 @@ public class Startup
         services.AddScoped<IRandomIntRepository, RandomIntRepository>();
         
         services.AddAutoMapper(typeof(Startup).Assembly);
+
+        services.AddHttpClient();
     }
 
     public void Configure(
