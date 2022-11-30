@@ -4,7 +4,7 @@ using Moq;
 
 namespace Test.Game.Domain;
 
-public class TestGame
+public class TestGameplay
 {
     public static IEnumerable<object[]> GetNullConstructorParameter()
     {
